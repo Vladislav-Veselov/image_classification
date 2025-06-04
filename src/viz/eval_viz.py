@@ -81,7 +81,7 @@ def main():
     metrics = []
     all_results = {}
     
-    model_types = ["lenet", "custom_cnn", "resnet"]
+    model_types = ["lenet", "custom_cnn", "resnet", "resnet_adapted"]
     
     for model_name in model_types:
         print(f"\nEvaluating {model_name}...")

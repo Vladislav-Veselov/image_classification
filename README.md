@@ -2,7 +2,7 @@
 
   
 
-This project implements and compares different CNN architectures for image classification on the CIFAR-10 dataset using PyTorch. The project includes implementations of LeNet, a custom CNN, and ResNet18, along with tools for training, evaluation, and visualization.
+This project implements and compares different CNN architectures for image classification on the CIFAR-10 dataset using PyTorch. The project includes implementations of LeNet, a custom CNN, and two versions of ResNet18, along with tools for training, evaluation, and visualization.
 
   
 
@@ -20,6 +20,8 @@ image-classifier/
 
 │ ├── custom_cnn.yaml # Custom CNN training config
 
+│ ├── resnet_adapted_cnn.yaml # Custom ResNet training config
+
 │ └── resnet.yaml # ResNet training config
 
 ├── experiments/ # Training outputs and model checkpoints
@@ -27,6 +29,8 @@ image-classifier/
 │ ├── lenet_baseline/ # LeNet experiment results
 
 │ ├── custom_cnn_baseline/ # Custom CNN experiment results
+
+│ ├── resnet_adapted_baseline/ # Custom CNN experiment results
 
 │ └── resnet_baseline/ # ResNet experiment results
 
@@ -39,6 +43,8 @@ image-classifier/
 │ │ ├── lenet.py
 
 │ │ ├── custom_cnn.py
+
+│ │ ├── resnet_adapted.py
 
 │ │ └── resnet.py
 
@@ -70,6 +76,10 @@ The project implements three different CNN architectures:
 
 3.  **ResNet18**: A residual network implementation with 18 layers
 
+4. **ResNetAdapted**: A ResNet-18 architecture specifically modified for CIFAR-10:
+   - Uses 3x3 convolutions in the first layer (instead of 7x7)
+   - Removes the initial max pooling layer
+   - Optimized stride and padding for 32x32 images
   
 
 ## Results
@@ -84,6 +94,7 @@ Our experiments show the following test accuracies:
 
 - ResNet18: 81.36%
 
+- ResNetAdapted: 88.82
   
 
 Detailed evaluation results, including confusion matrices and classification reports, can be found in the `experiments/_model_comparison` directory.
@@ -166,24 +177,17 @@ Available configuration files:
 
 -  `configs/custom_cnn.yaml` - Custom CNN training config
 
+-  `configs/resnet_adapted.yaml` - ResNet training config
+
 -  `configs/resnet.yaml` - ResNet training config
 
   
 
-You can also override the model specified in the config:
-
-```bash
-
-python  -m  src.train  --config  configs/lenet.yaml  --model  resnet
-
-```
-
-  
 
 ### Evaluation
 
   
-
+  
 To evaluate and compare all models:
 
 ```bash

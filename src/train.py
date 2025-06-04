@@ -12,7 +12,8 @@ def load_model(name: str, num_classes: int = 10):
     model_map = {
         "lenet": "LeNet",
         "custom_cnn": "CustomCNN",
-        "resnet": "ResNet18"
+        "resnet": "ResNet18",
+        "resnet_adapted": "ResNetAdapted18"
     }
     model_class = model_map.get(name)
     if model_class is None:

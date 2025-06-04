@@ -1,4 +1,5 @@
-Model,Accuracy,Loss,Best Val Accuracy
-lenet,68.97,0,70.36
-custom_cnn,79.71,0,81.14
-resnet,81.36,0,82.44
+Model,Accuracy,Best Val Accuracy
+lenet,68.97,70.36
+custom_cnn,79.71,81.14
+resnet,81.36,82.44
+resnet_adapted,88.82,90.22
