@@ -13,3 +13,5 @@ experiments/**/*.pt
 data/
 
 .pytest_cache/
+
+*.egg-info/
