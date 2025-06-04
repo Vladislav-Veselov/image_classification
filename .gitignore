@@ -1,0 +1,15 @@
+__pycache__/
+
+experiments/**/*.pt
+!experiments/**/best_model.pt
+
+.vscode/
+
+.env
+.venv
+
+*.log
+
+data/
+
+.pytest_cache/

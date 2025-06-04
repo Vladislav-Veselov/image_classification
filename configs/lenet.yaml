@@ -1,0 +1,5 @@
+experiment_name: "lenet_baseline"
+model: "lenet"
+batch_size: 128
+epochs: 60
+lr: 0.01

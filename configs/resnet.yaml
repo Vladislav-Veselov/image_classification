@@ -1,0 +1,5 @@
+experiment_name: "resnet_baseline"
+model: "resnet"
+batch_size: 128
+epochs: 100
+lr: 0.01
